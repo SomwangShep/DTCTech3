@@ -8,6 +8,12 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  
+  # ------------ ADD ---------------------
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'https://dtctech3-somwang.c9users.io'}
+  # http://dtctech3-somwang.c9users.io:8080/
+  # ------------ End ADD ------------------
 
   # Show full error reports.
   config.consider_all_requests_local = true
