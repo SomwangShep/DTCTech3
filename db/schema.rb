@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209014235) do
+ActiveRecord::Schema.define(version: 20180209131533) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "chefname"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20180209014235) do
   create_table "messages", force: :cascade do |t|
     t.text     "content"
     t.integer  "chef_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "email"
+    t.string   "token"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
